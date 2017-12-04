@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebApplication1.Models.Student>
+@{
+    ViewBag.Title = "StudentDetail";
+}
+
+<h2>StudentDetail</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>DOB</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var data1 in Model)
+        { 
+        <tr>
+            <td>@data1.Id</td>
+            <td>@data1.FirstName</td>
+            <td>@data1.LastName</td>
+            <td>@data1.Dob.ToShortDateString()</td>
+            <td>@Html.ActionLink("Edit","EditStudent","Home",new {id=data1.Id },new {@class="btn btn-primary" })</td>
+            <td>@Html.ActionLink("Delete", "DeleteStudent", "Home", new { id = data1.Id }, new { @class = "btn btn-danger" })</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+

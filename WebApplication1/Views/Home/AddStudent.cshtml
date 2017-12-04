@@ -1,0 +1,18 @@
+﻿@model WebApplication1.Models.Student
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+<h2>AddStudent</h2>
+@using (Html.BeginForm("AddStudent", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(m=>m.FirstName)
+    @Html.TextBoxFor(m=>m.FirstName)
+    @Html.LabelFor(m => m.LastName)
+    @Html.TextBoxFor(m => m.LastName)
+    @Html.LabelFor(m => m.Dob)
+    @Html.TextBoxFor(m => m.Dob ,"{0:dd MM yyyy}",new {@type="date" })
+    @Html.HiddenFor(m=>m.Id)
+    <button type="submit">Save</button>
+}
+
