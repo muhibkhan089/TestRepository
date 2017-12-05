@@ -119,9 +119,23 @@
     <Compile Include="Migrations\201712040553301_StudentGenerated.Designer.cs">
       <DependentUpon>201712040553301_StudentGenerated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712050513499_TeacherGenerated.cs" />
+    <Compile Include="Migrations\201712050513499_TeacherGenerated.Designer.cs">
+      <DependentUpon>201712050513499_TeacherGenerated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050518275_GenderGenerated.cs" />
+    <Compile Include="Migrations\201712050518275_GenderGenerated.Designer.cs">
+      <DependentUpon>201712050518275_GenderGenerated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050526085_teacherGenderMig.cs" />
+    <Compile Include="Migrations\201712050526085_teacherGenderMig.Designer.cs">
+      <DependentUpon>201712050526085_teacherGenderMig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentContext.cs" />
+    <Compile Include="Models\Teacher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +162,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712040553301_StudentGenerated.resx">
       <DependentUpon>201712040553301_StudentGenerated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050513499_TeacherGenerated.resx">
+      <DependentUpon>201712050513499_TeacherGenerated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050518275_GenderGenerated.resx">
+      <DependentUpon>201712050518275_GenderGenerated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050526085_teacherGenderMig.resx">
+      <DependentUpon>201712050526085_teacherGenderMig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -9,5 +9,7 @@ namespace WebApplication1.Models
     public class StudentContext:DbContext
     {
         public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Gender> Genders { get; set; }
     }
 }
