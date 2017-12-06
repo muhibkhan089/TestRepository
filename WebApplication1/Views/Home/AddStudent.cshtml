@@ -6,6 +6,9 @@
 <h2>AddStudent</h2>
 @using (Html.BeginForm("AddStudent", "Home", FormMethod.Post))
 {
+    //For security
+    @Html.AntiForgeryToken()
+    //Security End
     @Html.LabelFor(m=>m.FirstName)
     @Html.TextBoxFor(m=>m.FirstName)
     @Html.LabelFor(m => m.LastName)

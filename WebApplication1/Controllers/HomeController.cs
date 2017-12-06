@@ -32,6 +32,9 @@ namespace WebApplication1.Controllers
             return View();
         }
         //Add and insert Recoed in Student Table
+        //For Security
+        [ValidateAntiForgeryToken]
+        //End Security
         [HttpPost]
 
         public ActionResult AddStudent(Student data)
